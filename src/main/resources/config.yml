@@ -1,0 +1,5 @@
+servers:
+  - hub1
+  - hub2
+
+reload-message: "&aYou have reloaded the configuration file!"

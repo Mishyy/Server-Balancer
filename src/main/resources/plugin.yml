@@ -1,4 +1,4 @@
 name: ServerBalancer
 main: com.inkzzz.serverbalancer.ServerBalancerPlugin
-version: 1.0
+version: ${project.version}
 author: [Inkzzz]

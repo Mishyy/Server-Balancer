@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.inkzzz.serverbalancer</groupId>
-    <artifactId>ServerBalancer</artifactId>
+    <groupId>com.inkzzz</groupId>
+    <artifactId>serverbalancer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
@@ -14,15 +14,31 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
     </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>23.0.0</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>net.md-5</groupId>
             <artifactId>bungeecord-api</artifactId>
-            <version>1.9-SNAPSHOT</version>
+            <version>1.12-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <defaultGoal>clean package</defaultGoal>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -35,5 +51,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
